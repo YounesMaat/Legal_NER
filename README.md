@@ -33,7 +33,7 @@ To use this system, there is a class named Legal_Document_NER that you can insta
 
 ##### Instantiate the class with the mode of your choice
 ``` python
-legal_ner_system = Legal_Document_NER(few_shot_mode=True)  # or False for using fine-tuned model
+legal_ner_system = Legal_Document_NER(few_shot_mode=True)  # or False for using fine-tuned model (by default it is false).
 ```
 
 ##### Extract NER, spans, and pseudonymized text
