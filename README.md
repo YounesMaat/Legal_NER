@@ -20,7 +20,7 @@ Pseudonymization: After extracting the spans, the sensitive entities (such as na
 The postprocessing steps ensure that the text remains usable for further legal analysis while protecting sensitive data.
 
 ###### Model Selection:
-One-shot prompt using the Mistral v0.1 model.
+One-shot prompt using the Mistral-7B-Instruct-v0.1.
 Fine-tuned Mistral model with additional training specific to legal NER tasks.
 You can choose between these two modes by specifying the few_shot_mode=True parameter when instantiating the model.
 
@@ -57,17 +57,23 @@ This system provides a flexible, multilingual solution to pseudonymize sensitive
 ### Installation
 You can install the necessary dependencies by running:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 ### Usage
 
-Copy code
+```python
 from legal_document_ner import Legal_Document_NER
+```
 
 ### Instantiate the system with your preferred mode (one-shot or fine-tuned)
+```python
 legal_ner_system = Legal_Document_NER(few_shot_mode=True)
 
 ### Pass your legal text to the system
 text = "Insert your legal document text here"
-pseudonymized_text = legal_ner_system(text)
+name_entities, spans, pseudonymized_text = legal_ner_system(text)
 
-print(pseudonymized_text)
+print(name_entities)            #-> This is a dictionary of format : {NER_category: [list of name_entities] ...}
+print(spans)                    #-> This is a Json object of format : [ {'start': **, 'end':**, 'label':**, 'text':**} ...]
+print(pseudonymized_text)       #-> This is a string object of the pseudonymzed text with ordered name_entity category. 
+
+```
