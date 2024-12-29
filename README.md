@@ -82,4 +82,4 @@ Finetuning BERT for NER could improve the system's performance, particularly bec
 
 # Time
 
-The task requires some time to complete. Fine-tuning is timeconsuming given the computational cost. I started finetuning saturday's night and up to now (sunday, afternoon) the finetunins is still undone (taking in consideration that the sytem crushes before finishin the epoch), though QLora finetuning is adopted.
+The task requires some time to complete. Fine-tuning is timeconsuming given the computational cost. I started finetuning saturday's night and up to now (sunday, afternoon) the finetunins is still running (taking in consideration that the sytem crushes before finishing the epoch), though QLora finetuning is adopted.
