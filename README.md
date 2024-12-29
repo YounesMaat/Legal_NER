@@ -32,10 +32,12 @@ To use this system, there is a class named Legal_Document_NER that you can insta
 
 
 ##### Instantiate the class with the mode of your choice
-legal_ner_system = Legal_Document_NER(few_shot_mode=True)  # or False for fine-tuned model
+``` python
+legal_ner_system = Legal_Document_NER(few_shot_mode=True)  # or False for using fine-tuned model```
 
 ##### Extract NER, spans, and pseudonymized text
-pseudonymized_text = legal_ner_system(text)
+```python
+name_entities, spans, pseudonymized_text  = legal_ner_system(text)```
 The class automatically handles the text processing for you, extracting named entities, identifying spans, and pseudonymizing sensitive information while preserving public authority references.
 
 #### 3. Postprocessing
