@@ -76,6 +76,6 @@ The most optimal approach could be a hybrid model that combines the strengths of
 #### 3. Finetuning BERT for NER
 Finetuning BERT for NER could improve the system's performance, particularly because BERT is a bidirectional model. This allows it to capture context from both sides of a token, which can lead to more accurate entity detection, especially in complex legal texts where context is crucial for distinguishing between entities.
 
-#Time
+# Time
 
 The task requires some time to complete. Fine-tuning is timeconsuming given the computational cost. I started finetuning saturday's night and up to now (sunday, afternoon) the finetunins is still undone (taking in consideration that the sytem crushes before finishin the epoch), though QLora finetuning is adopted.
