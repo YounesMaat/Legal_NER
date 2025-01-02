@@ -68,18 +68,3 @@ print(spans)                    #-> This is a Json object of format : [ {'start'
 print(pseudonymized_text)       #-> This is a string object of the pseudonymzed text with ordered name_entity category. 
 
 ```
-
-
-# Development Plan
-#### 1. Improving the System
-Expand the dataset: Currently, only 20% of the dataset has been used for fine-tuning the Mistral model. Increasing the dataset size will likely improve the system's performance and accuracy.
-Training a dedicated NER model: In addition to the LLM-based solution, we could train a non-LLM-based model specifically designed for NER. This model would perform better but would be limited to the language it was trained on. However, this approach would require additional resources and may lack the multilingual flexibility that the LLM offers.
-#### 2. Hybrid Approach
-The most optimal approach could be a hybrid model that combines the strengths of both a dedicated NER model and a fine-tuned LLM. This would ensure more accurate and context-aware pseudonymization for the specific language(s) in the documents while maintaining the flexibility of LLM for multilingual support.
-
-#### 3. Finetuning BERT for NER
-Finetuning BERT for NER could improve the system's performance, particularly because BERT is a bidirectional model. This allows it to capture context from both sides of a token, which can lead to more accurate entity detection, especially in complex legal texts where context is crucial for distinguishing between entities.
-
-# Time
-
-The task requires some time to complete. Fine-tuning is timeconsuming given the computational cost. I started finetuning saturday's night and up to now (sunday, afternoon) the finetunins is still running (taking in consideration that the sytem crushes before finishing the epoch), though QLora finetuning is adopted.
